@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Messenger</h1>
+        <div class="header-buttons">
+            <button onclick="window.location.href='index.html'"><i class="fas fa-arrow-left"></i> Back</button>
+        </div>
+    </div>
+
+    <div class="body">
+        <div class="chat-container chat-page">
+            <div class="chat-area">
+                <div class="chat-header">
+                    <div class="chat-user-info">
+                        <div class="user-status-wrapper">
+                            <img src="pic2.png.jpg" alt="Current Chat" id="chat-user-image">
+                            <span class="online-status" id="user-online-status"></span>
+                        </div>
+                        <div class="user-details">
+                            <h3 id="chat-user-name">Prashanth</h3>
+                            <span class="status-text" id="status-text">Online</span>
+                        </div>
+                    </div>
+                    <div class="chat-actions">
+                        <button onclick="viewProfile()"><i class="fas fa-user"></i></button>
+                        <button><i class="fas fa-phone"></i></button>
+                        <button><i class="fas fa-video"></i></button>
+                        <button><i class="fas fa-ellipsis-v"></i></button>
+                    </div>
+                </div>
+                <div class="messages" id="messages-container">
+                    <!-- Messages will be dynamically added here -->
+                </div>
+                <div class="message-input">
+                    <button><i class="fas fa-plus"></i></button>
+                    <input type="text" id="message-input" placeholder="Type a message...">
+                    <button onclick="sendMessage()"><i class="fas fa-paper-plane"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="profile-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="profile-header">
+                <div class="profile-image">
+                    <img id="modal-user-image" src="" alt="Profile Picture">
+                </div>
+                <h2 id="modal-user-name"></h2>
+                <p id="modal-user-status"></p>
+            </div>
+            <div class="profile-info">
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <label>Email</label>
+                        <span id="modal-user-email">user@example.com</span>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <label>Phone</label>
+                        <span id="modal-user-phone">+1 234 567 890</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="chat.js"></script>
+</body>
+</html>
